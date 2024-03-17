@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html
+        lang="en"
+        layout:decorate="~{layout/default}"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Theater Detail</title>
+</head>
+<body>
+<!--begin::Content-->
+<div
+        class="content d-flex flex-column flex-column-fluid"
+        id="kt_content"
+        layout:fragment="content"
+>
+    <!-- Add a script tag to show the alert -->
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        var message = /*[[${message}]]*/ '';
+        if (message) {
+            alert(message);
+        }
+        /*]]>*/
+    </script>
+    <!--begin::Toolbar-->
+    <div class="toolbar" id="kt_toolbar">
+        <!--begin::Container-->
+        <div
+                class="container-fluid d-flex flex-stack"
+                id="kt_toolbar_container"
+        >
+            <!--begin::Page title-->
+            <div
+                    class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0"
+                    data-kt-swapper="true"
+                    data-kt-swapper-mode="prepend"
+                    data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
+            >
+                <!--begin::Title-->
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">
+                    Theater Details
+                </h1>
+                <!--end::Title-->
+                <!--begin::Separator-->
+                <span class="h-20px border-gray-200 border-start mx-4"></span>
+                <!--end::Separator-->
+                <!--begin::Breadcrumb-->
+                <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">
+                        <a class="text-muted text-hover-primary" href="/admin/home">Home</a>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <!--end::Item-->
+
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">Theaters Management</li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">Theater Details</li>
+                    <!--end::Item-->
+                </ul>
+                <!--end::Breadcrumb-->
+            </div>
+            <!--end::Page title-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Toolbar-->
+    <!--begin::Post-->
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div class="container-xxl" id="kt_content_container">
+            <!--begin::Toolbar-->
+            <div class="d-flex flex-wrap flex-stack my-5">
+                <!--begin::Heading-->
+                <h2 class="fs-2 fw-bold my-2">
+                    Theater <span class="fs-6 text-gray-400 ms-1" th:text="${theater.location}"></span>
+                </h2>
+                <!--end::Heading-->
+            </div>
+            <!--end::Toolbar-->
+            <!--begin::Basic info-->
+            <div class="card mb-5 mb-xl-10">
+                <!--begin::Card header-->
+                <div aria-controls="kt_account_profile_details" aria-expanded="true"
+                     class="card-header border-0 cursor-pointer"
+                     data-bs-target="#kt_account_profile_details" data-bs-toggle="collapse"
+                     role="button">
+                    <!--begin::Card title-->
+                    <div class="card-title m-0">
+                        <h3 class="fw-bolder m-0">Theater Details</h3>
+                    </div>
+                    <!--end::Card title-->
+                </div>
+                <!--begin::Card header-->
+                <!--begin::Content-->
+                <div class="collapse show" id="kt_account_profile_details">
+                    <!--begin::Form-->
+                    <form class="form kt_forms" enctype="multipart/form-data" id="kt_account_profile_details_form"
+                          novalidate th:action="@{/admin/theater/edit}" th:method="put">
+                        <input th:field="${theater.pk}" th:value="${theater.pk}" type="hidden">
+                        <!--begin::Card body-->
+                        <div class="card-body border-top p-9">
+                            <!--begin::Input group-->
+                            <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label fw-bold fs-6" for="address">Address</label>
+                                <!--end::Label-->
+                                <!--begin::Col-->
+                                <div class="col-lg-8 fv-row">
+                                    <input class="form-control form-control-lg form-control-solid" id="address"
+                                           required
+                                           th:field="${theater.address}" th:value="${theater.address}" type="text"/>
+                                    <div class="invalid-feedback">
+                                        Address is required
+                                    </div>
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                            <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label fw-bold fs-6" for="location">Location</label>
+                                <!--end::Label-->
+                                <!--begin::Col-->
+                                <div class="col-lg-8 fv-row">
+                                    <input class="form-control form-control-lg form-control-solid" id="location"
+                                           required
+                                           th:field="${theater.location}" th:value="${theater.location}" type="text"/>
+                                    <div class="invalid-feedback">
+                                        Location is required
+                                    </div>
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                            <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label fw-bold fs-6" for="username">Sub Location</label>
+                                <!--end::Label-->
+                                <!--begin::Col-->
+                                <div class="col-lg-8 fv-row">
+                                    <input class="form-control form-control-lg form-control-solid" id="username"
+                                           required
+                                           th:field="${theater.subLocation}" th:value="${theater.subLocation}" type="text"/>
+                                    <div class="invalid-feedback">
+                                        Sublocation is required
+                                    </div>
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+
+
+                        </div>
+                        <!--end::Card body-->
+                        <!--begin::Actions-->
+                        <div class="card-footer d-flex justify-content-end py-6 px-9">
+                            <button class="btn btn-light btn-active-light-primary me-2" type="reset">Discard</button>
+                            <button class="btn btn-primary" id="kt_account_profile_details_submit" type="submit">Save
+                                Changes
+                            </button>
+                        </div>
+                        <!--end::Actions-->
+                    </form>
+                    <!--end::Form-->
+                </div>
+                <!--end::Content-->
+            </div>
+            <!--end::Basic info-->
+            <!--begin::Row-->
+            <div class="row g-6 g-xl-9">
+                <!--begin::Auditorium-->
+                <!--begin::Col-->
+                <div class="col-md-6 col-xl-4">
+                    <!--begin::Card-->
+                    <a
+                            class="card border border-2 border-gray-300 border-hover"
+                            th:href="@{'/admin/theater/' + ${theater.pk} + '?detail=auditorium'}"
+                    >
+                        <!--begin::Card header-->
+                        <div class="card-header border-0 pt-9">
+                            <!--begin::Card Title-->
+                            <div class="card-title m-0">
+                                <!--begin::Avatar-->
+                                <div class="symbol symbol-50px w-50px bg-light">
+                                    <img
+                                            alt="image"
+                                            class="p-3"
+                                            th:src="@{/assets/media/svg/brand-logos/plurk.svg}"
+                                    />
+                                    <!--9 years bug!!!!-->
+                                </div>
+                                <!--end::Avatar-->
+                            </div>
+                            <!--end::Car Title-->
+                        </div>
+                        <!--end:: Card header-->
+                        <!--begin:: Card body-->
+                        <div class="card-body p-9">
+                            <!--begin::Name-->
+                            <div class="fs-3 fw-bolder text-dark">Auditorium</div>
+                            <!--end::Name-->
+                            <!--begin::Description-->
+                            <p class="text-gray-400 fw-bold fs-5 mt-1 mb-7">
+                                Auditorium Management
+                            </p>
+                            <!--end::Description-->
+                            <!--begin::Info-->
+                            <div class="d-flex flex-wrap mb-5">
+                                <!--begin::Due-->
+                                <div
+                                        class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-7 mb-3"
+                                >
+                                    <div class="fs-6 text-gray-800 fw-bolder">
+                                        <span th:text="${#dates.format(#dates.createNow(), 'dd-MM-yyyy')}"></span>
+                                    </div>
+                                    <div class="fw-bold text-gray-400">Today</div>
+                                </div>
+                                <!--end::Due-->
+                            </div>
+                            <!--end::Info-->
+                        </div>
+                        <!--end:: Card body-->
+                    </a>
+                    <!--end::Card-->
+                </div>
+                <!--end::Col-->
+                <!--end::Auditorium-->
+                <!--begin::Screning-->
+                <!--begin::Col-->
+                <div class="col-md-6 col-xl-4">
+                    <!--begin::Card-->
+                    <a
+                            class="card border border-2 border-gray-300 border-hover"
+                            th:href="@{'/admin/theater/' + ${theater.pk} + '?detail=screening'}"
+                    >
+                        <!--begin::Card header-->
+                        <div class="card-header border-0 pt-9">
+                            <!--begin::Card Title-->
+                            <div class="card-title m-0">
+                                <!--begin::Avatar-->
+                                <div class="symbol symbol-50px w-50px bg-light">
+                                    <img
+                                            alt="image"
+                                            class="p-3"
+                                            th:src="@{/assets/media/svg/brand-logos/plurk.svg}"
+                                    />
+                                </div>
+                                <!--end::Avatar-->
+                            </div>
+                            <!--end::Car Title-->
+                        </div>
+                        <!--end:: Card header-->
+                        <!--begin:: Card body-->
+                        <div class="card-body p-9">
+                            <!--begin::Name-->
+                            <div class="fs-3 fw-bolder text-dark">Screening</div>
+                            <!--end::Name-->
+                            <!--begin::Description-->
+                            <p class="text-gray-400 fw-bold fs-5 mt-1 mb-7">
+                                Screening Management
+                            </p>
+                            <!--end::Description-->
+                            <!--begin::Info-->
+                            <div class="d-flex flex-wrap mb-5">
+                                <!--begin::Due-->
+                                <div
+                                        class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-7 mb-3"
+                                >
+                                    <div class="fs-6 text-gray-800 fw-bolder">
+                                        <span th:text="${#dates.format(#dates.createNow(), 'dd-MM-yyyy')}"></span>
+                                    </div>
+                                    <div class="fw-bold text-gray-400">Today</div>
+                                </div>
+                                <!--end::Due-->
+                            </div>
+                            <!--end::Info-->
+                        </div>
+                        <!--end:: Card body-->
+                    </a>
+                    <!--end::Card-->
+                </div>
+                <!--end::Col-->
+                <!--begin::Work Place-->
+                <!--begin::Col-->
+                <div class="col-md-6 col-xl-4">
+                    <!--begin::Card-->
+                    <a
+                            class="card border border-2 border-gray-300 border-hover"
+                            th:href="@{'/admin/theater/' + ${theater.pk} + '?detail=workplace'}"
+                    >
+                        <!--begin::Card header-->
+                        <div class="card-header border-0 pt-9">
+                            <!--begin::Card Title-->
+                            <div class="card-title m-0">
+                                <!--begin::Avatar-->
+                                <div class="symbol symbol-50px w-50px bg-light">
+                                    <img
+                                            alt="image"
+                                            class="p-3"
+                                            th:src="@{/assets/media/svg/brand-logos/vodafone.svg}"
+                                    />
+                                </div>
+                                <!--end::Avatar-->
+                            </div>
+                            <!--end::Car Title-->
+                        </div>
+                        <!--end:: Card header-->
+                        <!--begin:: Card body-->
+                        <div class="card-body p-9">
+                            <!--begin::Name-->
+                            <div class="fs-3 fw-bolder text-dark">Staff</div>
+                            <!--end::Name-->
+                            <!--begin::Description-->
+                            <p class="text-gray-400 fw-bold fs-5 mt-1 mb-7">
+                                Staff Management
+                            </p>
+                            <!--end::Description-->
+                            <!--begin::Info-->
+                            <div class="d-flex flex-wrap mb-5">
+                                <!--begin::Due-->
+                                <div
+                                        class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-7 mb-3"
+                                >
+                                    <div class="fs-6 text-gray-800 fw-bolder">
+                                        <span th:text="${users.size() + ' Employee'}"></span>
+                                    </div>
+                                    <div class="fw-bold text-gray-400">Today</div>
+                                </div>
+                                <!--end::Due-->
+                            </div>
+                            <!--end::Info-->
+                        </div>
+                        <!--end:: Card body-->
+                    </a>
+                    <!--end::Card-->
+                </div>
+                <!--end::Col-->
+
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--begin::Page Custom Javascript(used by this page)-->
+    <script th:src="@{/assets/js/custom/disable-invalid-form-submit.js}"></script>
+    <!--end::Page Custom Javascript-->
+</div>
+<!--end::Content-->
+
+</body>
+</html>
+

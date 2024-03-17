@@ -1,0 +1,38 @@
+.swiper {
+  width: 100vw;
+  height: 80vh;
+}
+
+.swiper-slide {
+  /* padding: 1rem 0rem; */
+  background: url("../../assets/Black.jpg") no-repeat center right !important;
+  text-align: center;
+  font-size: 18px;
+  /* border-radius: 5px; */
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 1rem black,
+    0 0 0.8rem rgb(90, 90, 90);
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  
+}
+
+.swiper {
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.carousel {
+  /* height: 80vh; */
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}

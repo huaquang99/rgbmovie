@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html
+        layout:decorate="~{layout/default}"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8"/>
+    <title>RGBMovie Management Console</title>
+</head>
+<body>
+<!--begin::Content-->
+<div
+        class="content d-flex flex-column flex-column-fluid"
+        id="kt_content"
+        layout:fragment="content"
+>
+    <!--begin::Toolbar-->
+    <div class="toolbar" id="kt_toolbar">
+        <!--begin::Container-->
+        <div
+                class="container-fluid d-flex flex-stack"
+                id="kt_toolbar_container"
+        >
+            <!--begin::Page title-->
+            <div
+                    class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0"
+                    data-kt-swapper="true"
+                    data-kt-swapper-mode="prepend"
+                    data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
+            >
+                <!--begin::Title-->
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">
+                    Dashboard
+                </h1>
+                <!--end::Title-->
+                <!--begin::Separator-->
+                <span class="h-20px border-gray-200 border-start mx-4"></span>
+                <!--end::Separator-->
+                <!--begin::Breadcrumb-->
+                <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">
+                        <a class="text-muted text-hover-primary" href="/admin/home">Management Center</a>
+                    </li>
+                    <!--end::Item-->
+                </ul>
+                <!--end::Breadcrumb-->
+            </div>
+            <!--end::Page title-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Toolbar-->
+    <!--begin::Post-->
+	<div class="post d-flex flex-column-fluid" id="kt_post" style="margin-top: -1%;">
+		<!--begin::Container-->
+		<div id="kt_content_container" class="container-xxl">
+			<!--begin::About card-->
+			<div class="card">
+				<!--begin::Body-->
+				<div class="card-body p-lg-17">
+					<!--begin::About-->
+					<div class="mb-18">
+						<!--begin::Wrapper-->
+						<div class="mb-10">
+							<!--begin::Top-->
+							<div class="text-center mb-15">
+								<!--begin::Title-->
+								<h3 class="fs-2hx text-dark mb-5">About Us</h3>
+								<!--end::Title-->
+								<!--begin::Text-->
+								<div class="fs-5 text-muted fw-bold">Within the last 2 months, we have sold over $10.000 worth of cinema tickets without
+								<br />additional payment and with only deployed at some starting locations</div>
+								<!--end::Text-->
+							</div>
+							<!--end::Top-->
+							<!--begin::Overlay-->
+							<div class="overlay">
+								<!--begin::Image-->
+								<img class="w-100 card-rounded" src="https://i.ibb.co/CnsDFNL/1099496.jpg" alt="" />
+								<!--end::Image-->
+								<!--begin::Links-->
+								<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+									<a href="../../demo1/dist/pages/company/pricing.html" class="btn btn-primary">Pricing</a>
+									<a href="../../demo1/dist/pages/careers/apply.html" class="btn btn-light-primary ms-3">Join Us</a>
+								</div>
+								<!--end::Links-->
+							</div>
+							<!--end::Container-->
+						</div>
+						<!--end::Wrapper-->
+						<!--begin::Description-->
+						<div class="fs-5 fw-bold text-gray-600">
+							<!--begin::Text-->
+							<p class="mb-8">We are developing a unique concept of transforming former multiplexes into “Cultureplex”, where customers not only enjoy the movie, but also have access to diverse entertainment experiences. At CGV we implement the latest technology including SCREENX, IMAX, STARIUM, 4DX, Dolby Atmos as well as completely new and different F&B offerings. All while still providing the highest quality service by RGB Movie's staff.</p>
+							<!--end::Text-->
+							<!--begin::Text-->
+							<p class="mb-8">There’s an old maxim that states,
+							<span class="text-gray-800 pe-1">“No fun for the buyer, no fun for the seller.”</span>No matter what industry you’re working in, you should live and die by this statement.</p>
+							<!--end::Text-->
+							<!--begin::Text-->
+							<p class="mb-8">Before you do anything, be sure to pick a movie that actually interests you. Nothing – and
+							<span class="text-danger ">I mean NOTHING</span> - will kill a person more effectively than a bad cinema spot. You can tell a place is boring as soon as you walk in, and it’s so cringe-worthy it’s a little embarrassing.</p>
+							<!--end::Text-->
+							<!--begin::Text-->
+							<p class="mb-17">We can hear your objections already. “But dude, I have to watch with my gf/kid(s).” We feel your pain, we really do. During the course of our career, we’ve worked for most of the cinema there are, so we can tell how a bad cinema spot feels. Therefore, in that situation, assure that we'll provide you with the best service, the best experience to ease your pain.</p>
+							<!--end::Text-->
+						</div>
+						<!--end::Description-->
+					</div>
+					<!--end::About-->
+					<!--begin::Statistics-->
+					<div class="card bg-light mb-18">
+						<!--begin::Body-->
+						<div class="card-body py-15">
+							<!--begin::Wrapper-->
+							<div class="d-flex flex-center">
+								<!--begin::Items-->
+								<div class="d-flex justify-content-between mb-10 mx-auto w-xl-900px">
+									<!--begin::Item-->
+									<div class="octagon d-flex flex-center h-200px w-200px bg-body mx-2">
+										<!--begin::Content-->
+										<div class="text-center">
+											<!--begin::Symbol-->
+											<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+											<span class="svg-icon svg-icon-2tx svg-icon-primary">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+													<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="black" />
+													<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="black" />
+													<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="black" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+											<!--end::Symbol-->
+											<!--begin::Text-->
+											<div class="mt-1">
+												<!--begin::Animation-->
+												<div class="fs-lg-2hx fs-2x fw-bolder text-gray-800 d-flex align-items-center">
+												Only<div class="min-w-35px" data-kt-countup="true" data-kt-countup-value="3">0</div></div>
+												<!--end::Animation-->
+												<!--begin::Label-->
+												<span class="text-gray-600 fw-bold fs-5 lh-0">Staffs</span>
+												<!--end::Label-->
+											</div>
+											<!--end::Text-->
+										</div>
+										<!--end::Content-->
+									</div>
+									<!--end::Item-->
+									<!--begin::Item-->
+									<div class="octagon d-flex flex-center h-200px w-200px bg-body mx-2">
+										<!--begin::Content-->
+										<div class="text-center">
+											<!--begin::Symbol-->
+											<!--begin::Svg Icon | path: icons/duotune/graphs/gra008.svg-->
+											<span class="svg-icon svg-icon-2tx svg-icon-success">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path d="M13 10.9128V3.01281C13 2.41281 13.5 1.91281 14.1 2.01281C16.1 2.21281 17.9 3.11284 19.3 4.61284C20.7 6.01284 21.6 7.91285 21.9 9.81285C22 10.4129 21.5 10.9128 20.9 10.9128H13Z" fill="black" />
+													<path opacity="0.3" d="M13 12.9128V20.8129C13 21.4129 13.5 21.9129 14.1 21.8129C16.1 21.6129 17.9 20.7128 19.3 19.2128C20.7 17.8128 21.6 15.9128 21.9 14.0128C22 13.4128 21.5 12.9128 20.9 12.9128H13Z" fill="black" />
+													<path opacity="0.3" d="M11 19.8129C11 20.4129 10.5 20.9129 9.89999 20.8129C5.49999 20.2129 2 16.5128 2 11.9128C2 7.31283 5.39999 3.51281 9.89999 3.01281C10.5 2.91281 11 3.41281 11 4.01281V19.8129Z" fill="black" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+											<!--end::Symbol-->
+											<!--begin::Text-->
+											<div class="mt-1">
+												<!--begin::Animation-->
+												<div class="fs-lg-2hx fs-2x fw-bolder text-gray-800 d-flex align-items-center">
+												<div class="min-w-50px" data-kt-countup="true" data-kt-countup-value="54">0</div></div>
+												<!--end::Animation-->
+												<!--begin::Label-->
+												<span class="text-gray-600 fw-bold fs-5 lh-0">Days</span>
+												<!--end::Label-->
+											</div>
+											<!--end::Text-->
+										</div>
+										<!--end::Content-->
+									</div>
+									<!--end::Item-->
+									<!--begin::Item-->
+									<div class="octagon d-flex flex-center h-200px w-200px bg-body mx-2">
+										<!--begin::Content-->
+										<div class="text-center">
+											<!--begin::Symbol-->
+											<!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
+											<span class="svg-icon svg-icon-2tx svg-icon-info">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path d="M21 10H13V11C13 11.6 12.6 12 12 12C11.4 12 11 11.6 11 11V10H3C2.4 10 2 10.4 2 11V13H22V11C22 10.4 21.6 10 21 10Z" fill="black" />
+													<path opacity="0.3" d="M12 12C11.4 12 11 11.6 11 11V3C11 2.4 11.4 2 12 2C12.6 2 13 2.4 13 3V11C13 11.6 12.6 12 12 12Z" fill="black" />
+													<path opacity="0.3" d="M18.1 21H5.9C5.4 21 4.9 20.6 4.8 20.1L3 13H21L19.2 20.1C19.1 20.6 18.6 21 18.1 21ZM13 18V15C13 14.4 12.6 14 12 14C11.4 14 11 14.4 11 15V18C11 18.6 11.4 19 12 19C12.6 19 13 18.6 13 18ZM17 18V15C17 14.4 16.6 14 16 14C15.4 14 15 14.4 15 15V18C15 18.6 15.4 19 16 19C16.6 19 17 18.6 17 18ZM9 18V15C9 14.4 8.6 14 8 14C7.4 14 7 14.4 7 15V18C7 18.6 7.4 19 8 19C8.6 19 9 18.6 9 18Z" fill="black" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+											<!--end::Symbol-->
+											<!--begin::Text-->
+											<div class="mt-1">
+												<!--begin::Animation-->
+												<div class="fs-lg-2hx fs-2x fw-bolder text-gray-800 d-flex align-items-center">
+												<div class="min-w-50px" data-kt-countup="true" data-kt-countup-value="5000">0</div>+</div>
+												<!--end::Animation-->
+												<!--begin::Label-->
+												<span class="text-gray-600 fw-bold fs-5 lh-0">Payments</span>
+												<!--end::Label-->
+											</div>
+											<!--end::Text-->
+										</div>
+										<!--end::Content-->
+									</div>
+									<!--end::Item-->
+								</div>
+								<!--end::Items-->
+							</div>
+							<!--end::Wrapper-->
+							<!--begin::Testimonial-->
+							<div class="fs-2 fw-bold text-muted text-center mb-3">
+							<span class="fs-1 lh-1 text-gray-700">“</span>When you care about your movies, you’ll enjoy it in a
+							<br />
+							<span class="text-gray-700 me-1">more careful</span>, emotional way
+							<span class="fs-1 lh-1 text-gray-700">“</span></div>
+							<!--end::Testimonial-->
+							<!--begin::Author-->
+							<div class="fs-2 fw-bold text-muted text-center">
+								<a href="../../demo1/dist/account/security.html" class="link-primary fs-4 fw-bolder">Tai Dep Trai</a>
+								<span class="fs-4 fw-bolder text-gray-600">- RGB Staff</span>
+							</div>
+							<!--end::Author-->
+						</div>
+						<!--end::Body-->
+					</div>
+					<!--end::Statistics-->
+					<!--begin::Section-->
+					<div class="mb-16">
+						<!--begin::Top-->
+						<div class="text-center mb-12">
+							<!--begin::Title-->
+							<h3 class="fs-2hx text-dark mb-5">Publications</h3>
+							<!--end::Title-->
+							<!--begin::Text-->
+							<div class="fs-5 text-muted fw-bold">Our goal is to provide a complete and robust solution
+							<br />to boost all of our customer’s experiences</div>
+							<!--end::Text-->
+						</div>
+						<!--end::Top-->
+						<!--begin::Row-->
+						<div class="row g-10">
+							<!--begin::Col-->
+							<div class="col-md-4">
+								<!--begin::Publications post-->
+								<div class="card-xl-stretch me-md-6">
+									<!--begin::Overlay-->
+									<a class="d-block overlay mb-4" data-fslightbox="lightbox-hot-sales" href="https://i.ibb.co/qx3S1b3/office.jpg">
+										<!--begin::Image-->
+										<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px" style="background-image:url('https://i.ibb.co/qx3S1b3/office.jpg')"></div>
+										<!--end::Image-->
+										<!--begin::Action-->
+										<div class="overlay-layer bg-dark card-rounded bg-opacity-25">
+											<i class="bi bi-eye-fill fs-2x text-white"></i>
+										</div>
+										<!--end::Action-->
+									</a>
+									<!--end::Overlay-->
+									<!--begin::Body-->
+									<div class="m-0">
+										<!--begin::Title-->
+										<a href="../../demo1/dist/pages/profile/overview.html" class="fs-4 text-dark fw-bolder text-hover-primary text-dark lh-base">Our Office</a>
+										<!--end::Title-->
+										<!--begin::Text-->
+										<div class="fw-bold fs-5 text-gray-600 text-dark mt-3 mb-5">Find out where we punch our ideas and apllying for a chance to show us what you got</div>
+										<!--end::Text-->
+										<!--begin::Content-->
+										<div class="fs-6 fw-bolder">
+											<!--begin::Author-->
+											<a href="../../demo1/dist/pages/projects/users.html" class="text-gray-700 text-hover-primary">Tuan Loc</a>
+											<!--end::Author-->
+											<!--begin::Date-->
+											<span class="text-muted">on Sep 30 2023</span>
+											<!--end::Date-->
+										</div>
+										<!--end::Content-->
+									</div>
+									<!--end::Body-->
+								</div>
+								<!--end::Publications post-->
+							</div>
+							<!--end::Col-->
+							<!--begin::Col-->
+							<div class="col-md-4">
+								<!--begin::Publications post-->
+								<div class="card-xl-stretch mx-md-3">
+									<!--begin::Overlay-->
+									<a class="d-block overlay mb-4" data-fslightbox="lightbox-hot-sales" href="https://i.ibb.co/kM00H1v/office-desk-a1yivbaxal92jim2.jpg">
+										<!--begin::Image-->
+										<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px" style="background-image:url('https://i.ibb.co/kM00H1v/office-desk-a1yivbaxal92jim2.jpg')"></div>
+										<!--end::Image-->
+										<!--begin::Action-->
+										<div class="overlay-layer bg-dark card-rounded bg-opacity-25">
+											<i class="bi bi-eye-fill fs-2x text-white"></i>
+										</div>
+										<!--end::Action-->
+									</a>
+									<!--end::Overlay-->
+									<!--begin::Body-->
+									<div class="m-0">
+										<!--begin::Title-->
+										<a href="../../demo1/dist/pages/profile/overview.html" class="fs-4 text-dark fw-bolder text-hover-primary text-dark lh-base">RGB Admin - Before Applying</a>
+										<!--end::Title-->
+										<!--begin::Text-->
+										<div class="fw-bold fs-5 text-gray-600 text-dark mt-3 mb-5">All you need to know about us and all job positions to get a quick start</div>
+										<!--end::Text-->
+										<!--begin::Content-->
+										<div class="fs-6 fw-bolder">
+											<!--begin::Author-->
+											<a href="../../demo1/dist/pages/projects/users.html" class="text-gray-700 text-hover-primary">Le Quang</a>
+											<!--end::Author-->
+											<!--begin::Date-->
+											<span class="text-muted">on Oct 16 2023</span>
+											<!--end::Date-->
+										</div>
+										<!--end::Content-->
+									</div>
+									<!--end::Body-->
+								</div>
+								<!--end::Publications post-->
+							</div>
+							<!--end::Col-->
+							<!--begin::Col-->
+							<div class="col-md-4">
+								<!--begin::Publications post-->
+								<div class="card-xl-stretch ms-md-6">
+									<!--begin::Overlay-->
+									<a class="d-block overlay mb-4" data-fslightbox="lightbox-hot-sales" href="https://i.ibb.co/K2NLzG0/hand.jpg">
+										<!--begin::Image-->
+										<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px" style="background-image:url('https://i.ibb.co/K2NLzG0/hand.jpg')"></div>
+										<!--end::Image-->
+										<!--begin::Action-->
+										<div class="overlay-layer bg-dark card-rounded bg-opacity-25">
+											<i class="bi bi-eye-fill fs-2x text-white"></i>
+										</div>
+										<!--end::Action-->
+									</a>
+									<!--end::Overlay-->
+									<!--begin::Body-->
+									<div class="m-0">
+										<!--begin::Title-->
+										<a href="../../demo1/dist/pages/profile/overview.html" class="fs-4 text-dark fw-bolder text-hover-primary text-dark lh-base">RGB Movie - Our Policy</a>
+										<!--end::Title-->
+										<!--begin::Text-->
+										<div class="fw-bold fs-5 text-gray-600 text-dark mt-3 mb-5">All rights related policy & paperwork</div>
+										<!--end::Text-->
+										<!--begin::Content-->
+										<div class="fs-6 fw-bolder">
+											<!--begin::Author-->
+											<a href="../../demo1/dist/pages/projects/users.html" class="text-gray-700 text-hover-primary">Phat Tai</a>
+											<!--end::Author-->
+											<!--begin::Date-->
+											<span class="text-muted">on Nov 03 2023</span>
+											<!--end::Date-->
+										</div>
+										<!--end::Content-->
+									</div>
+									<!--end::Body-->
+								</div>
+								<!--end::Publications post-->
+							</div>
+							<!--end::Col-->
+						</div>
+						<!--end::Row-->
+					</div>
+					<!--end::Section-->
+					<!--begin::Team-->
+					<div class="mb-18">
+						<!--begin::Heading-->
+						<div class="text-center mb-12">
+							<!--begin::Title-->
+							<h3 class="fs-2hx text-dark mb-5">Our Great Team</h3>
+							<!--end::Title-->
+							<!--begin::Sub-title-->
+							<div class="fs-5 text-muted fw-bold">It’s no doubt that when a development takes longer to complete, additional costs to
+							<br />integrate and test each extra feature creeps up and haunts most of us.</div>
+							<!--end::Sub-title=-->
+						</div>
+						<!--end::Heading-->
+						<!--begin::Slider-->
+						<div class="tns tns-default mb-10">
+							<!--begin::Wrapper-->
+							<div data-tns="true" data-tns-loop="true" data-tns-swipe-angle="false" data-tns-speed="2000" data-tns-autoplay="true" data-tns-autoplay-timeout="18000" data-tns-controls="true" data-tns-nav="false" data-tns-items="1" data-tns-center="false" data-tns-dots="false" data-tns-prev-button="#kt_team_slider_prev" data-tns-next-button="#kt_team_slider_next" data-tns-responsive="{1200: {items: 3}, 992: {items: 2}}">
+								<!--begin::Item-->
+								<div class="text-center">
+									<!--begin::Photo-->
+									<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('https://i.ibb.co/bWtrkKd/588a779ac7eeb1483d75d1fcdcb0ca96.jpg')"></div>
+									<!--end::Photo-->
+									<!--begin::Person-->
+									<div class="mb-0">
+										<!--begin::Name-->
+										<a href="#" class="text-dark fw-bolder text-hover-primary fs-3">Nguyen Tuan Loc</a>
+										<!--end::Name-->
+										<!--begin::Position-->
+										<div class="text-muted fs-6 fw-bold mt-1">Development Lead</div>
+										<!--begin::Position-->
+									</div>
+									<!--end::Person-->
+								</div>
+								<!--end::Item-->
+								<!--begin::Item-->
+								<div class="text-center">
+									<!--begin::Photo-->
+									<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('https://i.ibb.co/HnyVrMw/leopard-spots-its-prey.jpg')"></div>
+									<!--end::Photo-->
+									<!--begin::Person-->
+									<div class="mb-0">
+										<!--begin::Name-->
+										<a href="#" class="text-dark fw-bolder text-hover-primary fs-3">Nguyen Phat Tai</a>
+										<!--end::Name-->
+										<!--begin::Position-->
+										<div class="text-muted fs-6 fw-bold mt-1">Dragdown Expert</div>
+										<!--begin::Position-->
+									</div>
+									<!--end::Person-->
+								</div>
+								<!--end::Item-->
+								<!--begin::Item-->
+								<div class="text-center">
+									<!--begin::Photo-->
+									<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('https://i.ibb.co/JsfkKBL/cat1.png')"></div>
+									<!--end::Photo-->
+									<!--begin::Person-->
+									<div class="mb-0">
+										<!--begin::Name-->
+										<a href="#" class="text-dark fw-bolder text-hover-primary fs-3">Hua Le Quang</a>
+										<!--end::Name-->
+										<!--begin::Position-->
+										<div class="text-muted fs-6 fw-bold mt-1">Creative Director</div>
+										<!--begin::Position-->
+									</div>
+									<!--end::Person-->
+								</div>
+								<!--end::Item-->
+								<!--begin::Item-->
+								<div class="text-center">
+									<!--begin::Photo-->
+									<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('https://i.ibb.co/bWtrkKd/588a779ac7eeb1483d75d1fcdcb0ca96.jpg')"></div>
+									<!--end::Photo-->
+									<!--begin::Person-->
+									<div class="mb-0">
+										<!--begin::Name-->
+										<a href="#" class="text-dark fw-bolder text-hover-primary fs-3">Nguyen Tuan Loc</a>
+										<!--end::Name-->
+										<!--begin::Position-->
+										<div class="text-muted fs-6 fw-bold mt-1">Project Manager</div>
+										<!--begin::Position-->
+									</div>
+									<!--end::Person-->
+								</div>
+								<!--end::Item-->
+								<!--begin::Item-->
+								<div class="text-center">
+									<!--begin::Photo-->
+									<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('https://i.ibb.co/HnyVrMw/leopard-spots-its-prey.jpg')"></div>
+									<!--end::Photo-->
+									<!--begin::Person-->
+									<div class="mb-0">
+										<!--begin::Name-->
+										<a href="#" class="text-dark fw-bolder text-hover-primary fs-3">Nguyen Phat Tai</a>
+										<!--end::Name-->
+										<!--begin::Position-->
+										<div class="text-muted fs-6 fw-bold mt-1">Head Writer</div>
+										<!--begin::Position-->
+									</div>
+									<!--end::Person-->
+								</div>
+								<!--end::Item-->
+								<!--begin::Item-->
+								<div class="text-center">
+									<!--begin::Photo-->
+									<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('https://i.ibb.co/JsfkKBL/cat1.png')"></div>
+									<!--end::Photo-->
+									<!--begin::Person-->
+									<div class="mb-0">
+										<!--begin::Name-->
+										<a href="#" class="text-dark fw-bolder text-hover-primary fs-3">Hua Le Quang</a>
+										<!--end::Name-->
+										<!--begin::Position-->
+										<div class="text-muted fs-6 fw-bold mt-1">Marketing Manager</div>
+										<!--begin::Position-->
+									</div>
+									<!--end::Person-->
+								</div>
+								<!--end::Item-->
+							</div>
+							<!--end::Wrapper-->
+							<!--begin::Button-->
+							<button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_prev">
+								<!--begin::Svg Icon | path: icons/duotune/arrows/arr074.svg-->
+								<span class="svg-icon svg-icon-3x">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+										<path d="M11.2657 11.4343L15.45 7.25C15.8642 6.83579 15.8642 6.16421 15.45 5.75C15.0358 5.33579 14.3642 5.33579 13.95 5.75L8.40712 11.2929C8.01659 11.6834 8.01659 12.3166 8.40712 12.7071L13.95 18.25C14.3642 18.6642 15.0358 18.6642 15.45 18.25C15.8642 17.8358 15.8642 17.1642 15.45 16.75L11.2657 12.5657C10.9533 12.2533 10.9533 11.7467 11.2657 11.4343Z" fill="black" />
+									</svg>
+								</span>
+								<!--end::Svg Icon-->
+							</button>
+							<!--end::Button-->
+							<!--begin::Button-->
+							<button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_next">
+								<!--begin::Svg Icon | path: icons/duotune/arrows/arr071.svg-->
+								<span class="svg-icon svg-icon-3x">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+										<path d="M12.6343 12.5657L8.45001 16.75C8.0358 17.1642 8.0358 17.8358 8.45001 18.25C8.86423 18.6642 9.5358 18.6642 9.95001 18.25L15.4929 12.7071C15.8834 12.3166 15.8834 11.6834 15.4929 11.2929L9.95001 5.75C9.5358 5.33579 8.86423 5.33579 8.45001 5.75C8.0358 6.16421 8.0358 6.83579 8.45001 7.25L12.6343 11.4343C12.9467 11.7467 12.9467 12.2533 12.6343 12.5657Z" fill="black" />
+									</svg>
+								</span>
+								<!--end::Svg Icon-->
+							</button>
+							<!--end::Button-->
+						</div>
+						<!--end::Slider-->
+					</div>
+					<!--end::Team-->
+					<!--begin::Card-->
+					<div class="card mb-4 bg-light text-center">
+						<!--begin::Body-->
+						<div class="card-body py-12">
+							<!--begin::Icon-->
+							<a href="#" class="mx-4">
+								<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 448 512"><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></svg>
+							</a>
+							<!--end::Icon-->
+							<!--begin::Icon-->
+							<a href="#" class="mx-4">
+								<svg xmlns="http://www.w3.org/2000/svg" height="31px" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+							</a>
+							<!--end::Icon-->
+							<!--begin::Icon-->
+							<a href="#" class="mx-4">
+								<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+							</a>
+							<!--end::Icon-->
+							<!--begin::Icon-->
+							<a href="#" class="mx-4">
+								<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+							</a>
+							<!--end::Icon-->
+							<!--begin::Icon-->
+							<a href="#" class="mx-4">
+								<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 640 512"><path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"/></svg>
+							</a>
+							<!--end::Icon-->			
+							<!--begin::Icon-->
+							<a href="#" class="mx-4">
+								<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+							</a>
+							<!--end::Icon-->							
+							<!--begin::Icon-->
+							<a href="#" class="mx-4">
+								<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 448 512"><style>svg{fill:mediumpurple}</style><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+							</a>
+							<!--end::Icon-->	
+						</div>
+						<!--end::Body-->
+					</div>
+					<!--end::Card-->
+				</div>
+				<!--end::Body-->
+			</div>
+			<!--end::About card-->
+		</div>
+		<!--end::Container-->
+	</div>
+	<!--end::Post-->    
+	<!--begin::Page Custom Javascript(used by this page)-->
+    <script defer
+            th:src="@{/assets/js/custom/widgets.js}"
+            xmlns:th="http://www.thymeleaf.org"
+    ></script>
+    <!--end::Page Custom Javascript-->
+    <!--end::Javascript-->
+</div>
+<!--end::Content-->
+
+</body>
+</html>
